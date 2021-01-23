@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#E6E4E4"
+  tools:context=".MainActivity">
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/sw_music_list_down_pull"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="90dp"
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_music_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <RelativeLayout
+    android:id="@+id/rl_music_controller"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="#fff"
+    android:padding="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+      android:id="@+id/iv_sing_pic_main"
+      android:layout_width="85dp"
+      android:layout_height="match_parent"
+      android:src="@drawable/ncs" />
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      android:gravity="center">
+
+      <ImageButton
+        android:id="@+id/btn_prev_main"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/control_backward_dark" />
+
+      <ImageButton
+        android:id="@+id/btn_play_pause_main"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/control_play_dark" />
+
+      <ImageButton
+        android:id="@+id/btn_next_main"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/control_forward_dark" />
+    </LinearLayout>
+  </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
